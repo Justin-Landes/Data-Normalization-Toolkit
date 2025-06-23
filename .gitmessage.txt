@@ -1,0 +1,26 @@
+# <type>: <short summary of your change>
+# Example: feat: add BMI calculation module
+
+# Explain what and why, not just how.
+#
+# Provide context about the change. What problem does it solve?
+# Were there any alternatives considered? What tradeoffs were made?
+#
+# Bullet points can help for clarity:
+# - Added BMI calculation logic in main.py
+# - Added tests to validate new logic
+# - Updated requirements.txt with new dependency
+#
+# Reference related issues or tickets:
+# Resolves: #123
+# Related: #456
+
+# -------------------------------
+# COMMIT TYPES (for prefix above):
+# feat     – new feature
+# fix      – bug fix
+# docs     – documentation only
+# style    – formatting (no code change)
+# refactor – code change w/o behavior change
+# test     – adding or updating tests
+# chore    – config/build/tooling tasks

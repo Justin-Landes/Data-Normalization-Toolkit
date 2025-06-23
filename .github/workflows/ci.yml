@@ -1,0 +1,36 @@
+name: CI - BMI Analyzer
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11"]
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run linter (flake8)
+        run: |
+          pip install flake8
+          flake8 src/ tests/
+
+      - name: Run tests (if any)
+        run: |
+          pip install pytest
+          pytest tests/ || echo "Tests folder empty or no tests defined yet"

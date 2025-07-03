@@ -1,3 +1,22 @@
-[build-system]
-requires = ["setuptools>=42"]
-build-backend = "setuptools.build_meta"
+[project]
+name = "data-normalization-toolkit"
+version = "1.0.1"
+description = "A Python-based CLI tool for normalizing messy CSV datasets using YAML-configured cleaning rules."
+authors = [
+    { name = "Justin Landes", email = "landesemail@gmail.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q"
+testpaths = ["tests"]

@@ -1,0 +1,89 @@
+field_rules:
+  UI_Key:
+    ignore: false
+    replace_nulls_with:
+      enabled: true
+      value: Not Specified
+    trim_whitespace: true
+    normalize_case: title
+    remove_invalid_chars: true
+    fix_date_format:
+      input_format: '%m%d%Y %H%M'
+      output_format: '%Y-%m-%d %H:%M'
+  Created_Date:
+    ignore: false
+    replace_nulls_with:
+      enabled: true
+      value: Not Specified
+    trim_whitespace: true
+    normalize_case: title
+    remove_invalid_chars: true
+    fix_date_format:
+      input_format: '%m%d%Y %H%M'
+      output_format: '%Y-%m-%d %H:%M'
+  Closed_Date:
+    ignore: false
+    replace_nulls_with:
+      enabled: true
+      value: Not Specified
+    trim_whitespace: true
+    normalize_case: title
+    remove_invalid_chars: true
+    fix_date_format:
+      input_format: '%m%d%Y %H%M'
+      output_format: '%Y-%m-%d %H:%M'
+  Agency:
+    ignore: false
+    replace_nulls_with:
+      enabled: true
+      value: Not Specified
+    trim_whitespace: true
+    normalize_case: title
+    remove_invalid_chars: true
+    fix_date_format:
+      input_format: '%m%d%Y %H%M'
+      output_format: '%Y-%m-%d %H:%M'
+  Complaint Type:
+    ignore: false
+    replace_nulls_with:
+      enabled: true
+      value: Not Specified
+    trim_whitespace: true
+    normalize_case: title
+    remove_invalid_chars: true
+    fix_date_format:
+      input_format: '%m%d%Y %H%M'
+      output_format: '%Y-%m-%d %H:%M'
+  Location_Type:
+    ignore: false
+    replace_nulls_with:
+      enabled: true
+      value: Not Specified
+    trim_whitespace: true
+    normalize_case: title
+    remove_invalid_chars: true
+    fix_date_format:
+      input_format: '%m%d%Y %H%M'
+      output_format: '%Y-%m-%d %H:%M'
+  Zip:
+    ignore: false
+    replace_nulls_with:
+      enabled: true
+      value: Not Specified
+    trim_whitespace: true
+    normalize_case: title
+    remove_invalid_chars: true
+    fix_date_format:
+      input_format: '%m%d%Y %H%M'
+      output_format: '%Y-%m-%d %H:%M'
+  Resolution_Description:
+    ignore: false
+    replace_nulls_with:
+      enabled: true
+      value: Not Specified
+    trim_whitespace: true
+    normalize_case: sentence
+    remove_invalid_chars: true
+    fix_date_format:
+      input_format: '%m%d%Y %H%M'
+      output_format: '%Y-%m-%d %H:%M'

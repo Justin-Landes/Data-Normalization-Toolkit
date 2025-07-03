@@ -1,4 +1,32 @@
+# Ignore Python cache and bytecode
 __pycache__/
-*.pyc
+*.py[cod]
+
+# Ignore environment and system files
 .env
-.ipynb_checkpoints/
+.venv/
+.DS_Store
+
+# Data folders with Test Files
+data/1-CSV-Raw/*
+!data/1-CSV-Raw/test_input_sample.csv  				# <-- Initial test (CSV dirty)
+
+data/2-CSV-Export/*
+!data/2-CSV-Export/test_input_sample_CLEANED.csv	# <-- Initial test (CSV cleaned)
+
+data/3-SQLite-Export/*
+!data/3-SQLite-Export/test_input_sample_CLEANED.db	# <-- Initial test (DB cleaned)
+
+# YAML config
+!config/config.yaml						            # <-- Initial test config
+
+# Test Logs and Reports
+logs/*
+!logs/run*.log				                        # <-- Initial test log
+
+reports/*
+!reports/run*.html			                        # <-- Initial test report
+
+# Ignore config regeneration or extra temp files
+*.bak
+*.tmp

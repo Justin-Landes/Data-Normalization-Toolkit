@@ -1,21 +1,12 @@
-# Core project dependencies
-# (Add any specific project libraries below)
+pandas==2.3.0
+pyyaml==6.0.2
+sqlalchemy==2.0.41
+psycopg2-binary==2.9.10
+python-dateutil==2.9.0.post0
 
-# Testing
-pytest
-
-# Linting
-flake8
-
-# Code formatting
-black
-
-# Type checking (optional but recommended)
-mypy
-
-# Import sorting (optional but helps with consistency)
-isort
-
-# Test coverage (optional but useful later)
-coverage
-
+# Dev / Testing / Formatting
+pytest==8.4.1
+black==25.1.0
+isort==6.0.1
+mypy==1.16.1
+flake8==7.3.0

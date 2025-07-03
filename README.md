@@ -92,19 +92,23 @@ You can adjust these rules per field, save the config, and rerun the tool MULTIP
 - End-to-end test: tests/test_end_to_end.py with real input/output checks
 - Run tests using: pytest tests/ to obtain 14 successful tests
 
-## Folder Structure
-├── config/               # YAML config file
-├── data/
-│   ├── 1-CSV-Raw/        # Input CSVs
-│   ├── 2-CSV-Export/     # Cleaned CSVs
-│   └── 3-SQLite-Export/  # Optional SQLite DB Exports
-├── docs/                 # README and CHANGELOG files
-├── logs/                 # Log files
-├── normalizer/           # All core logic modules
-├── reports/              # HTML cleaning reports
-├── templates/            # HTML report template
-├── tests/                # Unit and E2E tests
-└── main.py               # Run this script to start cleaning
+## Folder and File Structure
+| Folder or File                | Purpose                                                              |
+|-------------------------------|----------------------------------------------------------------------|
+| `config/`                     | Stores YAML config file generated from source CSV file               |
+| `data/1-CSV-Raw/`             | Location for raw/dirty input CSV files                               |
+| `data/2-CSV-Export/`          | Location for cleaned CSV output files (_CLEANED.csv)                 |
+| `data/3-SQLite-Export/`       | Location for optional cleaned SQLite DB with cleaned table           |
+| `docs/`                       | Changelog                                                            |
+| `logs/`                       | Timestamped log files for each cleaning session                      |
+| `normalizer/`                 | Contains all core modules for cleaning, reporting, config, export    |
+| `reports/`                    | Timestamped HTML reports showing pre/post cleaning results           |
+| `templates/`                  | Stores template for HTML report format and content                   |
+| `tests/`                      | Unit and End-to-End Testing                                          |
+| `main.py`                     | Primary script to launch interactive cleaning pipeline               |
+| `README.md`                   | Project overview, setup, and usage instructions                      |
+| `pyproject.toml`              | Project metadata and tool dependencies                               |
+| `requirements.txt`            | Explicit list of dependencies used by the app                        |
 
 ## Future Versions
 Planned features for DNT v2 and beyond:

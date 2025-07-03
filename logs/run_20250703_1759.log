@@ -1,0 +1,58 @@
+2025-07-03 17:59:10,990 - INFO - Input CSV file: data/1-CSV-Raw\test_input_sample.csv
+2025-07-03 17:59:15,127 - INFO - Regenerated fresh config.
+2025-07-03 17:59:18,039 - INFO - --- PRE-CLEAN DATA SUMMARY ---
+Shape: (5, 8)
+
+Null Counts:
+UI_Key                    0
+Created_Date              0
+Closed_Date               0
+Agency                    0
+Complaint Type            0
+Location_Type             0
+Zip                       0
+Resolution_Description    1
+dtype: int64
+
+Unique Value Counts:
+UI_Key                    5
+Created_Date              1
+Closed_Date               5
+Agency                    1
+Complaint Type            2
+Location_Type             3
+Zip                       5
+Resolution_Description    4
+dtype: int64
+2025-07-03 17:59:18,043 - INFO - Changes detected in row 5:
+2025-07-03 17:59:18,043 - INFO -   Created_Date: '5/26/2025 23:59' \u279c '2025-05-26 23:59'
+2025-07-03 17:59:18,044 - INFO -   Closed_Date: '5/27/2025 0:11' \u279c '2025-05-27 01:01'
+2025-07-03 17:59:18,044 - INFO -   Agency: 'NYPD' \u279c 'Nypd'
+2025-07-03 17:59:18,044 - INFO -   Location_Type: 'Residential Building - House#$%' \u279c 'Residential Building - House'
+2025-07-03 17:59:18,044 - INFO -   Resolution_Description: 'ReSPONded to the COMPLAINT and took action to fix the CONDITION.' \u279c 'Responded to the complaint and took action to fix the condition.'
+2025-07-03 17:59:18,048 - INFO - --- POST-CLEAN DATA SUMMARY ---
+Shape: (5, 8)
+
+Null Counts:
+UI_Key                    0
+Created_Date              0
+Closed_Date               0
+Agency                    0
+Complaint Type            0
+Location_Type             0
+Zip                       0
+Resolution_Description    0
+dtype: int64
+
+Unique Value Counts:
+UI_Key                    5
+Created_Date              1
+Closed_Date               5
+Agency                    1
+Complaint Type            2
+Location_Type             3
+Zip                       5
+Resolution_Description    4
+dtype: int64
+2025-07-03 17:59:19,495 - INFO - User confirmed SQLite export.
+2025-07-03 17:59:19,520 - INFO - SQLite export: C:\PythonProjects\Data-Normalization-Toolkit\data\3-SQLite-Export\test_input_sample_CLEANED.db

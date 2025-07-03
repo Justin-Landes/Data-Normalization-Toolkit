@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DNT Report - 20250703_1759</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 2em; background: #f9f9f9; }
+        h1 { color: #333; }
+        .section { margin-bottom: 2em; }
+        .block { background: #fff; padding: 1em; border-radius: 8px; box-shadow: 0 0 6px rgba(0,0,0,0.1); }
+        pre { white-space: pre-wrap; word-wrap: break-word; font-size: 0.95em; }
+    </style>
+</head>
+<body>
+    <h1>Data Normalization Toolkit (DNT) Report</h1>
+    <p><strong>Timestamp:</strong> 20250703_1759</p>
+    <p><strong>Input File:</strong> test_input_sample.csv</p>
+    <p><strong>Config Used:</strong> config/config.yaml</p>
+
+    
+    <p><strong>Clean Data Export:</strong> data/2-CSV-Export\test_input_sample_CLEANED.csv</p>
+    
+
+    
+    <p><strong>SQLite Export:</strong> data/3-SQLite-Export\test_input_sample_CLEANED.db</p>
+    
+    
+    <div class="section">
+        <h2>Pre-Clean Summary</h2>
+        <div class="block">
+            <pre>--- PRE-CLEAN DATA SUMMARY ---<br>Shape: (5, 8)<br><br>Null Counts:<br>UI_Key                    0<br>Created_Date              0<br>Closed_Date               0<br>Agency                    0<br>Complaint Type            0<br>Location_Type             0<br>Zip                       0<br>Resolution_Description    1<br>dtype: int64<br><br>Unique Value Counts:<br>UI_Key                    5<br>Created_Date              1<br>Closed_Date               5<br>Agency                    1<br>Complaint Type            2<br>Location_Type             3<br>Zip                       5<br>Resolution_Description    4<br>dtype: int64</pre>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Post-Clean Summary</h2>
+        <div class="block">
+            <pre>--- POST-CLEAN DATA SUMMARY ---<br>Shape: (5, 8)<br><br>Null Counts:<br>UI_Key                    0<br>Created_Date              0<br>Closed_Date               0<br>Agency                    0<br>Complaint Type            0<br>Location_Type             0<br>Zip                       0<br>Resolution_Description    0<br>dtype: int64<br><br>Unique Value Counts:<br>UI_Key                    5<br>Created_Date              1<br>Closed_Date               5<br>Agency                    1<br>Complaint Type            2<br>Location_Type             3<br>Zip                       5<br>Resolution_Description    4<br>dtype: int64</pre>
+        </div>
+    </div>
+
+    
+    <div class="section">
+        <h2>Changes Demonstrated by Example Row #5</h2>
+        <div class="block">
+            
+                <p><strong>Created_Date</strong>: "5/26/2025 23:59" ➜ "2025-05-26 23:59"</p>
+            
+                <p><strong>Closed_Date</strong>: "5/27/2025 0:11" ➜ "2025-05-27 01:01"</p>
+            
+                <p><strong>Agency</strong>: "NYPD" ➜ "Nypd"</p>
+            
+                <p><strong>Location_Type</strong>: "Residential Building - House#$%" ➜ "Residential Building - House"</p>
+            
+                <p><strong>Resolution_Description</strong>: "ReSPONded to the COMPLAINT and took action to fix the CONDITION." ➜ "Responded to the complaint and took action to fix the condition."</p>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
